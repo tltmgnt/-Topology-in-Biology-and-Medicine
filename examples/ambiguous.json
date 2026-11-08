@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "context": {
+    "organism": "fictional-organism",
+    "system": "synthetic-system",
+    "condition": "illustrative-only"
+  },
+  "nodes": [
+    {
+      "id": "A",
+      "kind": "gene",
+      "label": "Fictional A"
+    },
+    {
+      "id": "B",
+      "kind": "protein",
+      "label": "Fictional B"
+    },
+    {
+      "id": "C",
+      "kind": "process",
+      "label": "Fictional C"
+    },
+    {
+      "id": "D",
+      "kind": "phenotype",
+      "label": "Fictional D"
+    }
+  ],
+  "edges": [
+    {
+      "id": "AB",
+      "source": "A",
+      "target": "B",
+      "kind": "regulatory",
+      "sign": "positive",
+      "evidence_ids": [
+        "ev-AB"
+      ]
+    },
+    {
+      "id": "BC",
+      "source": "B",
+      "target": "C",
+      "kind": "regulatory",
+      "sign": "negative",
+      "evidence_ids": [
+        "ev-BC"
+      ]
+    },
+    {
+      "id": "AC",
+      "source": "A",
+      "target": "C",
+      "kind": "regulatory",
+      "sign": "negative",
+      "evidence_ids": [
+        "ev-AC"
+      ]
+    },
+    {
+      "id": "CD",
+      "source": "C",
+      "target": "D",
+      "kind": "association",
+      "sign": "unknown",
+      "evidence_ids": [
+        "ev-CD"
+      ]
+    },
+    {
+      "id": "opposite",
+      "source": "A",
+      "target": "C",
+      "kind": "regulatory",
+      "sign": "positive",
+      "evidence_ids": [
+        "ev-opposite"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-AB",
+      "source": "synthetic:ev-AB",
+      "provenance_group": "declared-lab-1",
+      "context": {
+        "organism": "fictional-organism",
+        "system": "synthetic-system",
+        "condition": "illustrative-only"
+      },
+      "observed_at": "2026-11-01T00:00:00Z",
+      "expires_at": "2026-12-01T00:00:00Z",
+      "sha256": "23e53f8f76d13fb03340a8a48186ab85b3cfa3ae4af9bf758842916ef901aef8",
+      "content_base64": "eyJyZWNvcmQiOiAiZXYtQUIiLCAic3ludGhldGljIjogdHJ1ZX0=",
+      "kind": "synthetic"
+    },
+    {
+      "id": "ev-BC",
+      "source": "synthetic:ev-BC",
+      "provenance_group": "declared-lab-1",
+      "context": {
+        "organism": "fictional-organism",
+        "system": "synthetic-system",
+        "condition": "illustrative-only"
+      },
+      "observed_at": "2026-11-01T00:00:00Z",
+      "expires_at": "2026-12-01T00:00:00Z",
+      "sha256": "cfbdc7f2d1c8f823f5cb6b4666249a38ce19bb3a5c349cfd10de54f0e4864fde",
+      "content_base64": "eyJyZWNvcmQiOiAiZXYtQkMiLCAic3ludGhldGljIjogdHJ1ZX0=",
+      "kind": "synthetic"
+    },
+    {
+      "id": "ev-AC",
+      "source": "synthetic:ev-AC",
+      "provenance_group": "declared-lab-1",
+      "context": {
+        "organism": "fictional-organism",
+        "system": "synthetic-system",
+        "condition": "illustrative-only"
+      },
+      "observed_at": "2026-11-01T00:00:00Z",
+      "expires_at": "2026-12-01T00:00:00Z",
+      "sha256": "13652b6f470215d39548cf42dac7052a71f335ae23a090a393b5b06420ddf970",
+      "content_base64": "eyJyZWNvcmQiOiAiZXYtQUMiLCAic3ludGhldGljIjogdHJ1ZX0=",
+      "kind": "synthetic"
+    },
+    {
+      "id": "ev-CD",
+      "source": "synthetic:ev-CD",
+      "provenance_group": "declared-lab-1",
+      "context": {
+        "organism": "fictional-organism",
+        "system": "synthetic-system",
+        "condition": "illustrative-only"
+      },
+      "observed_at": "2026-11-01T00:00:00Z",
+      "expires_at": "2026-12-01T00:00:00Z",
+      "sha256": "4d149ebc060430f1e7272bd43752fd0a6c0939dfa61e76b3c11905acb2298483",
+      "content_base64": "eyJyZWNvcmQiOiAiZXYtQ0QiLCAic3ludGhldGljIjogdHJ1ZX0=",
+      "kind": "synthetic"
+    },
+    {
+      "id": "ev-opposite",
+      "source": "synthetic:ev-opposite",
+      "provenance_group": "declared-lab-1",
+      "context": {
+        "organism": "fictional-organism",
+        "system": "synthetic-system",
+        "condition": "illustrative-only"
+      },
+      "observed_at": "2026-11-01T00:00:00Z",
+      "expires_at": "2026-12-01T00:00:00Z",
+      "sha256": "32c2bf450974cff39628830f624ac235843d5f04c4c647f3c5a3b83681dad480",
+      "content_base64": "eyJyZWNvcmQiOiAiZXYtb3Bwb3NpdGUiLCAic3ludGhldGljIjogdHJ1ZX0=",
+      "kind": "synthetic"
+    }
+  ]
+}
