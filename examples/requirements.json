@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-08T00:00:00Z",
+  "minimum_provenance_groups": 1,
+  "required_nodes": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "required_paths": [
+    {
+      "id": "A-C",
+      "source": "A",
+      "target": "C",
+      "expected_sign": "negative"
+    }
+  ],
+  "excluded_edges": []
+}
