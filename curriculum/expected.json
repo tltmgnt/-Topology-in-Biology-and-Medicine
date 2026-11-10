@@ -1,0 +1,50 @@
+{
+  "case_count": 7,
+  "cases": [
+    {
+      "actual": "positive",
+      "case": "two inhibitions have positive parity",
+      "expected": "positive",
+      "passed": true
+    },
+    {
+      "actual": "unknown",
+      "case": "unknown sign remains unknown",
+      "expected": "unknown",
+      "passed": true
+    },
+    {
+      "actual": "DECLARED_CHECKS_SATISFIED",
+      "case": "qualified synthetic reference",
+      "expected": "DECLARED_CHECKS_SATISFIED",
+      "passed": true
+    },
+    {
+      "actual": "GAPS_FOUND",
+      "case": "altered evidence creates a gap",
+      "expected": "GAPS_FOUND",
+      "passed": true
+    },
+    {
+      "actual": true,
+      "case": "digest failure remains visible",
+      "expected": true,
+      "passed": true
+    },
+    {
+      "actual": false,
+      "case": "no clinical authority",
+      "expected": false,
+      "passed": true
+    },
+    {
+      "actual": false,
+      "case": "no execution authority",
+      "expected": false,
+      "passed": true
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Synthetic curriculum checks only",
+  "status": "PASS"
+}

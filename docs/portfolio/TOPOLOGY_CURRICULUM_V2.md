@@ -1,6 +1,6 @@
 # Topology compatibility and curriculum v2 — -Topology-in-Biology-and-Medicine
 
-Version 2 adapts the explicit-molecular-graph teaching pattern to this repository's actual role. This is documentation and a learning/decision framework; it introduces no mathematical engine, runtime dependency or operational permission.
+The verified edition of version 2 adapts the explicit-molecular-graph teaching pattern to this repository's actual role. This edition adds executable learning checks and reviewed answer keys. It does not introduce a new topology engine or grant operational permission.
 
 ## Repository decision
 
@@ -40,42 +40,55 @@ Prerequisites: basic programming, sets, functions and graph vocabulary. Work in 
 | 5. Comparison | Justify mathematical necessity and cost. | Complete the six-criterion card for the existing approach and one proposed alternative; record unknowns honestly. | Evidence-backed recommendation with baseline and explicit veto conditions. |
 | 6. Reproduction | Communicate the bounded result. | Reproduce the capstone using existing offline fixtures and record software version, inputs, outputs and limitations. | Reviewable notebook or report distinguishing computation, replay, independent evaluation and authorization. |
 
-## Source-linked reading laboratory
+## Worked reasoning and source explanation
 
-The table is a guided selection of source lines, not an assertion that the whole repository is covered. Line numbers refer to the inspected source blob `e95b84a1661c967ae98e01a6d35dbd9aca63db9d` in [bio_topology/analysis.py](../../bio_topology/analysis.py). Recheck anchors after source changes.
+Sign multiplication is parity: negative×negative=positive, while any unknown factor remains unknown. build_report() first qualifies evidence bytes, declared context and captured validity time, then builds qualified edge and walk sets. Altering a payload digest leaves a visible CONTENT_MISMATCH and creates a gap. This proves the integrity gate ran; it does not authenticate the biological source or establish a causal effect.
 
-| Line | Statement | Learning check |
+Read the [inspected source](https://github.com/tltmgnt/-Topology-in-Biology-and-Medicine/blob/e6eb6c57954547af9e50ac7a583e6d985d0c4f04/bio_topology/analysis.py) alongside the [executable answer key](../../curriculum/lab.py). The source link is pinned to the inspected revision; the lab and any explicitly described fix are in this change.
+
+## Run the worked laboratory
+
+From the repository root, with Python 3.12 (the recorded local version is 3.12.14):
+
+```sh
+python curriculum/lab.py --verify
+```
+
+The lab checks **7 explicit expectations** against existing repository functions. It prints a JSON case report and exits nonzero on a wrong result. `--verify` additionally compares the entire case report with [expected.json](../../curriculum/expected.json). Read the input and predict each result before opening the answer key. No API account, credentials, model download, trading action or equipment connection is needed.
+
+| Checkpoint | Expected answer |
+| --- | --- |
+| two inhibitions have positive parity | `"positive"` |
+| unknown sign remains unknown | `"unknown"` |
+| qualified synthetic reference | `"DECLARED_CHECKS_SATISFIED"` |
+| altered evidence creates a gap | `"GAPS_FOUND"` |
+| digest failure remains visible | `true` |
+| no clinical authority | `false` |
+| no execution authority | `false` |
+
+The comparisons above encode independently specified small examples and contract expectations; a passing answer key is not evidence of complete domain correctness. The original functions and their existing test suites remain the authority for broader supported contracts.
+
+## Learner tasks and assessment rubric
+
+1. Before running the lab, predict every expected answer and derive one numeric result or state transition by hand.
+2. Explain the worked reasoning above using the referenced source, including the rejected or counterexample case.
+3. Add a new valid example and a nearby failing example. Explain which assumption changes, then compare against the existing implementation. For concept/static labs, keep the result explicitly at that level.
+4. Complete the scorecard for a proposed extension and a simpler baseline. Leave measurements unknown until collected; a task that the baseline already solves is not evidence for additional topology.
+
+| Competency | Points | Full-credit evidence |
 | --- | --- | --- |
-| [11](../../bio_topology/analysis.py#L11) | `def canonical(value):` | State the input/output contract and trace one normal and one failing case. |
-| [12](../../bio_topology/analysis.py#L12) | `return (json.dumps(value, sort_keys=True, separators=(',', ':'), allow_nan=False) + '\n').encode()` | Predict the returned value and distinguish a computed result from authorization. |
-| [15](../../bio_topology/analysis.py#L15) | `def fingerprint(value):` | State the input/output contract and trace one normal and one failing case. |
-| [16](../../bio_topology/analysis.py#L16) | `return hashlib.sha256(canonical(value)).hexdigest()` | Explain the exact bytes bound by the digest and why hashing does not authenticate the source. |
-| [19](../../bio_topology/analysis.py#L19) | `def evidence_assessment(dataset, policy):` | State the input/output contract and trace one normal and one failing case. |
-| [35](../../bio_topology/analysis.py#L35) | `return results` | Predict the returned value and distinguish a computed result from authorization. |
-| [38](../../bio_topology/analysis.py#L38) | `def edge_assessment(dataset, policy, evidence):` | State the input/output contract and trace one normal and one failing case. |
-| [61](../../bio_topology/analysis.py#L61) | `return results` | Predict the returned value and distinguish a computed result from authorization. |
-| [64](../../bio_topology/analysis.py#L64) | `def regulatory_graph(dataset, edge_ids):` | State the input/output contract and trace one normal and one failing case. |
-| [70](../../bio_topology/analysis.py#L70) | `return graph` | Predict the returned value and distinguish a computed result from authorization. |
-| [73](../../bio_topology/analysis.py#L73) | `def multiply(left, right):` | State the input/output contract and trace one normal and one failing case. |
-| [75](../../bio_topology/analysis.py#L75) | `return 'unknown'` | Predict the returned value and distinguish a computed result from authorization. |
-| [76](../../bio_topology/analysis.py#L76) | `return 'positive' if left == right else 'negative'` | Predict the returned value and distinguish a computed result from authorization. |
-| [79](../../bio_topology/analysis.py#L79) | `def signed_walks(graph, source, target):` | State the input/output contract and trace one normal and one failing case. |
-| [82](../../bio_topology/analysis.py#L82) | `return {}` | Predict the returned value and distinguish a computed result from authorization. |
-| [104](../../bio_topology/analysis.py#L104) | `return results` | Predict the returned value and distinguish a computed result from authorization. |
-| [107](../../bio_topology/analysis.py#L107) | `def topology(dataset, edge_ids):` | State the input/output contract and trace one normal and one failing case. |
-| [141](../../bio_topology/analysis.py#L141) | `return {'weak_components': components, 'isolated_nodes': sorted(node for node in weak if not weak[node]),` | Trace component bookkeeping on a disconnected example. |
-| [146](../../bio_topology/analysis.py#L146) | `def build_report(data, requirements):` | State the input/output contract and trace one normal and one failing case. |
-| [184](../../bio_topology/analysis.py#L184) | `return {'schema_version': 1, 'engine_version': ENGINE_VERSION,` | Separate type, shape and value checks; test a missing field and an invalid value. |
-## Assessment and verification
+| Model and contract | 0–3 | Correct objects, relation direction, labels/units, input bounds and missingness. |
+| Derivation and trace | 0–3 | Hand derivation agrees with the specified fixture; source steps explain why. |
+| Counterexample | 0–3 | New failing/boundary case has a justified expected result; rejection is not suppressed. |
+| Scope and necessity | 0–3 | Distinguishes software behavior from validation and compares an explicit simpler alternative. |
 
-A learner must explain the model, trace the capstone, identify a counterexample and state the scope boundary. Assess these four competencies equally; a numerical score cannot compensate for an unsupported scientific or operational claim.
+Completion requires at least 10/12 and no zero in scope/necessity. A runnable answer key alone is not evidence that a learner achieved this competency. No learner-outcome study has been performed.
 
-Relevant existing checks:
+## Verification evidence and maintenance
 
-- [tests/test_bio.py](../../tests/test_bio.py)
-- [tests/test_researchos.py](../../tests/test_researchos.py)
+[VALIDATION.json](../../curriculum/VALIDATION.json) records the inspected base revision, local Python version, source/fixture hashes, lab/answer hashes, case count and exit codes. All cases were executed locally. An in-memory copy with a deliberately wrong comparison was also executed and returned nonzero, checking that the grading failure path is active. Those injected failures are harness checks, not scientific adversarial evaluations.
 
-Follow [README](../../README.md) for environment and installed-package instructions. Read scripts before execution; source-reading exercises do not authorize provider calls, model downloads, live orders, hardware actions or messages. Synthetic fixtures establish software behavior only. This documentation change does not report those exercises as already executed.
+The dedicated [curriculum workflow](../../.github/workflows/curriculum.yml) runs the same `--verify` command on relevant pull-request changes. CI status is reported by GitHub; the local record does not assert that remote CI passed. Existing full-suite and installed-package requirements still apply to runtime changes. When source or fixture semantics change, inspect the diff and rederive answers before updating expected.json. Never regenerate expected answers solely to silence a failure. Refresh the local validation record after an actual run; do not rewrite its recorded base revision as if a new run occurred.
 
 ## Interoperability and adoption gate
 
