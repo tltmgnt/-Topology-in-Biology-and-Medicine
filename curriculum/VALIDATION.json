@@ -1,0 +1,28 @@
+{
+  "case_count": 7,
+  "command": "python curriculum/lab.py --verify",
+  "exit_code": 0,
+  "expected_sha256": "59d50a97e2d526a633be06c7185a06a88d50a0fdd0cf6f7d0ecdf4478e0b5601",
+  "lab_sha256": "60d8ef79e994856d5e88b254c228515d9c175d6b3b2350b5660b81083dbdd8d1",
+  "python": "3.12.14",
+  "repository": "tltmgnt/-Topology-in-Biology-and-Medicine",
+  "schema_version": 1,
+  "scope": "Local synthetic curriculum validation on the recorded source snapshot; not complete repository CI, learning outcomes, independent scientific reproduction or deployment approval",
+  "source_and_fixture_sha256": {
+    "bio_topology/__init__.py": "d99455d914fa4a86de0a6a3838b835e6011b42b8fbd450f2e03d95ea031b5399",
+    "bio_topology/__main__.py": "f8f181b92575bfa467b1bddd351fbad13cb33b47758c4a67551223a5510c0da2",
+    "bio_topology/analysis.py": "f491e2b5934c28ad35ff27ad478c74460e73ef080f9d6dd606a8d8f2cbd89106",
+    "bio_topology/io.py": "ee43ec7a797d02f78465f82b81fa9e530502372e19956e9f78bc27bc81a0b797",
+    "bio_topology/model.py": "913f6a0c1abeca33c2d26309c7fa2ca7e912d135fdd3cc49bf1939709023cad4",
+    "bio_topology/render.py": "747e98d01ec9e29224d016ab498d918594a2e37505d8f6ba8d04de4c2f8755c5",
+    "examples/ambiguous.json": "e4f0ad31d24c9e762b2e360a08a5a82759de141fb75d9d367536fe70b81c58cb",
+    "examples/dataset.json": "4788bbb3e6ee16128f390aec08601b4dfe91f4e9eff7345dd36726a6c8d6582e",
+    "examples/expired.json": "d1b844cb20bcc28d63fec782743924b8998f89b9d2e5f0ba54110dc32b26a48f",
+    "examples/gaps.json": "3d542a4d6e044462739e5985bd02cc77a983d60755d8bf33570820f63b00bf40",
+    "examples/outage.json": "de6f7db1f2a6817c38f141835a89ae5ec65f0c6b79972d42ca8d88ea9e50eb1c",
+    "examples/requirements.json": "181ec570d5d1464d3161983960619c57dcc3a71bc199647eb3b93f0f23d7523f",
+    "examples/unknown.json": "b4d32b3187f0039d09461b641f75123dd29d67cfc03618b4ab533ecf877a7dc6"
+  },
+  "source_base_commit": "e6eb6c57954547af9e50ac7a583e6d985d0c4f04",
+  "wrong_expectation_exit_code": 1
+}
